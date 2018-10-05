@@ -1,8 +1,8 @@
 # KitChestPMMP
-this pmmp plugin kitchestpmmp is coded by me basically advancedkits in chest
+this pmmp plugin is kitchestpmmp is coded by me basically advancedkits in chest
 
 # todo
-add PiggyCustomEnchnats Support
+add PiggyCustomEnchants Support
 add FormAPI Support
 
 # to fix
