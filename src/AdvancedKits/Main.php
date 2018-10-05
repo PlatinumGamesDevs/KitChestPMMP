@@ -24,7 +24,7 @@ class Main extends PluginBase {
 	/**@var LangManager */
 	public $langManager;
 
-	public function onEnable(){
+	public function onEnable() : void{
 		@mkdir($this->getDataFolder() . "cooldowns/");
 		$this->saveDefaultConfig();
 		$this->loadKits();
@@ -33,11 +33,11 @@ class Main extends PluginBase {
 		if($this->getServer()->getPluginManager()->getPlugin("PurePerms") !== null and !$this->getConfig()->get("force-builtin-permissions")){
 			$this->permManager = true;
 		}
-		$this->getServer()->getScheduler()->scheduleDelayedRepeatingTask(new CoolDownTask($this), 1200, 1200);
-		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+		$this->getScheduler()->scheduleDelayedRepeatingTask(new CoolDownTask($this), 1200, 1200);
+		$this->getPluginManager()->registerEvents(new EventListener($this), $this);
 	}
 
-	public function onDisable(){
+	public function onDisable() : void{
 		foreach($this->kits as $kit){
 			$kit->save();
 		}
@@ -48,18 +48,15 @@ class Main extends PluginBase {
 			case "kit":
 				if(!($sender instanceof Player)){
 					$sender->sendMessage($this->langManager->getTranslation("in-game"));
-
 					return true;
 				}
 				if(!isset($args[0])){
 					$sender->sendMessage($this->langManager->getTranslation("av-kits", implode(", ", array_keys($this->kits))));
-
 					return true;
 				}
 				$kit = $this->getKit($args[0]);
 				if($kit === null){
 					$sender->sendMessage($this->langManager->getTranslation("no-kit", $args[0]));
-
 					return true;
 				}
 				//$kit->handleRequest($sender);
@@ -86,6 +83,7 @@ class Main extends PluginBase {
 									return true;
 								}else{
 									$player->sendMessage($this->langManager->getTranslation("cant-afford", $this->name));
+									return true;
 								}
 							}else{
 								$chest = Item::get(Item::CHEST, 25, 1);
@@ -158,7 +156,7 @@ class Main extends PluginBase {
 	 * @param string $kit
 	 * @return Kit|null
 	 */
-	public function getKit(string $kit){
+	public function getKit(string $kit) : Kit{
 		/**@var Kit[] $lowerKeys */
 		$lowerKeys = array_change_key_case($this->kits, CASE_LOWER);
 		if(isset($lowerKeys[strtolower($kit)])){
@@ -173,7 +171,7 @@ class Main extends PluginBase {
 	 * @param bool $object whether to return the kit object or the kit name
 	 * @return kit|null
 	 */
-	public function getPlayerKit($player, $object = false){
+	public function getPlayerKit($player, bool $object = false) : Kit{
 		if($player instanceof Player) $player = $player->getName();
 
 		return isset($this->hasKit[strtolower($player)]) ? ($object ? $this->hasKit[strtolower($player)] : $this->hasKit[strtolower($player)]->getName()) : null;
