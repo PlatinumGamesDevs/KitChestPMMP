@@ -8,7 +8,7 @@ description: "KitChestPMMP By PlatinumGamesDevs And Server"
 commands:
  kit:
   description: "KitChestPMMP By PlatinumGamesDevs And Server"
-  usage: "/kit <kit name>"
+  usage: "/kit <Kit Name>"
   permission: advancedkits.command
   aliases: [kits, kitlist]
 permissions:
