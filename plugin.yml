@@ -1,7 +1,7 @@
 name: AdvancedKits
 main: AdvancedKits\Main
 version: 1.0.0
-api: [4.0.0]
+api: [3.0.0, 3.2.3, 4.0.0]
 author: PlatinumGamesDevs
 authors: luca28pet, PlatinumGamesDevs
 softdepend: [""]
