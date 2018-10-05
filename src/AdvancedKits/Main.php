@@ -76,10 +76,10 @@ class Main extends PluginBase {
 									$chest->setCustomName(TextFormat::RESET . TextFormat::BOLD . TextFormat::DARK_GRAY . "[" . TextFormat::GOLD . "+" . TextFormat::DARK_GRAY . "] " . TextFormat::GOLD . $kit->getName() . " Kit " . TextFormat::DARK_GRAY . "[" . TextFormat::GOLD . "+" . TextFormat::DARK_GRAY . "]" . TextFormat::RESET);
 									$chest->setLore([
 										"",
-										TextFormat::GRAY . "Tap anywhere to redeem",
-										TextFormat::GRAY . "A container that contains the " . $kit->getName() . " Kit",
+										TextFormat::GRAY . "Tap Anywhere To Redeem",
+										TextFormat::GRAY . "A Container That Contains The " . $kit->getName() . " Kit",
 										"",
-										TextFormat::RED . "Be sure to clear your inventory!",
+										TextFormat::RED . "Be Sure To Clear Your Inventory Use This In /wild",
 									]);
 									$sender->getInventory()->addItem($chest);
 									$player->sendMessage($this->langManager->getTranslation("sel-kit", $this->name));
@@ -95,10 +95,10 @@ class Main extends PluginBase {
 								$chest->setCustomName(TextFormat::RESET . TextFormat::BOLD . TextFormat::DARK_GRAY . "[" . TextFormat::GOLD . "+" . TextFormat::DARK_GRAY . "] " . TextFormat::GOLD . $kit->getName() . " Kit " . TextFormat::DARK_GRAY . "[" . TextFormat::GOLD . "+" . TextFormat::DARK_GRAY . "]" . TextFormat::RESET);
 								$chest->setLore([
 									"",
-									TextFormat::GRAY . "Tap anywhere to redeem",
-									TextFormat::GRAY . "A container that contains the " . $kit->getName() . " Kit",
+									TextFormat::GRAY . "Tap Anywhere To Redeem",
+									TextFormat::GRAY . "A Container That Contains The " . $kit->getName() . " Kit",
 									"",
-									TextFormat::RED . "Be sure to clear your inventory!",
+									TextFormat::RED . "Be Sure To Clear Your Inventory Use This In /wild",
 								]);
 								$sender->getInventory()->addItem($chest);
 								$player->sendMessage($this->langManager->getTranslation("sel-kit", $kit->name));
