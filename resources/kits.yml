@@ -1,0 +1,36 @@
+---
+Starter:
+  items:
+  - 310:0:1:§eStarter Helmet:protection:1:unbreaking:1
+  - 311:0:1:§eStarter Chestplate:protection:1:unbreaking:1
+  - 312:0:1:§eStarter Leggings:protection:1:unbreaking:1
+  - 313:0:1:§eStarter Boots:protection:1:unbreaking:1
+  - 276:0:1:§eStarter Sword:sharpness:1:unbreaking:1:looting:1
+  - 278:0:1:§eStarter Pickaxe:efficiency:1:unbreaking:1:silk_touch:1
+  - 279:0:1:§eStarter Axe:efficiency:1:unbreaking:1:silk_touch:1
+  - 277:0:1:§eStarter Shovel:efficiency:1:unbreaking:1:silk_touch:1
+  - 293:0:1:§eStarter Hoe:efficiency:1:unbreaking:1:silk_touch:1
+  - 364:0:32:DEFAULT
+  - 322:0:5:DEFAULT
+  - 466:0:1:DEFAULT
+  - 264:0:3:DEFAULT
+  - 265:0:3:DEFAULT
+  - 266:0:3:DEFAULT
+  - 17:0:10:DEFAULT
+  - 49:0:10:DEFAULT
+  - 7:0:5:DEFAULT
+  helmet:
+  chestplate:
+  leggings:
+  boots:
+  commands:
+  - "tell {player} Claimed Kit Starter Plugin By PlatinumgamesDevs"
+
+  cooldown:
+    hours: 0
+    minutes: 0
+  worlds:
+  - me
+  users:
+  - me
+  ...
