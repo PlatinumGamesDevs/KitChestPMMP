@@ -1,15 +1,16 @@
 name: AdvancedKits
 main: AdvancedKits\Main
-version: 2.0.0
+version: 1.0.0
 api: [4.0.0]
 author: PlatinumGamesDevs
 softdepend: [""]
-description: ""
+description: "KitChestPMMP By PlatinumGamesDevs And Server"
 commands:
  kit:
-  description: KitChestPMMP By PlatinumGamesDevs And Server
-  usage: "/kit (kit name)"
+  description: "KitChestPMMP By PlatinumGamesDevs And Server"
+  usage: "/kit <kit name>"
   permission: advancedkits.command
+  aliases: [kits, kitlist]
 permissions:
  advancedkits.command:
   description: "allows the player to use /kit command"
