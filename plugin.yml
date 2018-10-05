@@ -3,6 +3,7 @@ main: AdvancedKits\Main
 version: 1.0.0
 api: [4.0.0]
 author: PlatinumGamesDevs
+authors: luca28pet, PlatinumGamesDevs
 softdepend: [""]
 description: "KitChestPMMP By PlatinumGamesDevs And Server"
 commands:
