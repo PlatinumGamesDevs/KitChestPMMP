@@ -48,18 +48,15 @@ class Main extends PluginBase {
 			case "kit":
 				if(!($sender instanceof Player)){
 					$sender->sendMessage($this->langManager->getTranslation("in-game"));
-
 					return true;
 				}
 				if(!isset($args[0])){
 					$sender->sendMessage($this->langManager->getTranslation("av-kits", implode(", ", array_keys($this->kits))));
-
 					return true;
 				}
 				$kit = $this->getKit($args[0]);
 				if($kit === null){
 					$sender->sendMessage($this->langManager->getTranslation("no-kit", $args[0]));
-
 					return true;
 				}
 				//$kit->handleRequest($sender);
